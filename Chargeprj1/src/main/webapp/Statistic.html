@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel=stylesheet type="text/css" href="menucss.css" />
+        <meta charset="utf-8">
+        <title>阿祥的記帳本</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row"></div>
+            <div class="col-xs-6">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="/Chargeprj1/index.html">首頁</a>
+                    <a href="/Chargeprj1/Insert.html">新增</a>
+                    <a href="/Chargeprj1/Query.html">查詢</a>
+                    <a href="/Chargeprj1/Statistic.html">統計</a>
+
+                </div>
+
+                <div id="main">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 功能</span>
+                    <form action="Query_Statistic" method="post" >
+                        <select name="months">               
+                            <option value="Date >= '2017-01' and Date <= '2017-02'">一月</option>
+                            <option value="Date >= '2017-02' and Date <= '2017-03'">二月</option>
+                            <option value="Date >= '2017-03' and Date <= '2017-04'">三月</option>
+                            <option value="Date >= '2017-04' and Date <= '2017-05'">四月</option>
+                            <option value="Date >= '2017-05' and Date <= '2017-06'">五月</option>
+                            <option value="Date >= '2017-06' and Date <= '2017-07'">六月</option>
+                            <option value="Date >= '2017-07' and Date <= '2017-08'">七月</option>
+                            <option value="Date >= '2017-08' and Date <= '2017-09'">八月</option>
+                            <option value="Date >= '2017-09' and Date <= '2017-10'">九月</option>
+                            <option value="Date >= '2017-10' and Date <= '2017-11'">十月</option>
+                            <option value="Date >= '2017-11' and Date <= '2017-12'">十一月</option>
+                            <option value="Date >= '2017-12' and Date <= '2018-01'">十二月</option>
+
+                        </select>
+                        <input type='submit' value="查詢">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

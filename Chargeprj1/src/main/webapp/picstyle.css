@@ -1,0 +1,17 @@
+﻿body { 
+
+} 
+img { 
+  max-width: 100%;
+  width    : 600px;
+  height   : 400px; 
+}
+
+/* 如果使用者視窗寬度 <= 768px */
+@media screen and (max-width: 768px) {
+  img { 
+    max-width:100%;
+        
+	height:auto;
+  }
+}

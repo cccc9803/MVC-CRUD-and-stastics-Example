@@ -1,0 +1,103 @@
+﻿<!Doctype html>
+<html>
+    <head>
+
+
+        <title>阿祥的記帳本</title>
+        <link rel=stylesheet type="text/css" href="menucss.css" />
+        <meta charset="utf-8">
+        <!--使用BootStrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- 使用 jQuery -->
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/hot-sneaks/jquery-ui.css" rel="stylesheet">
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+
+
+        <script>
+            $(document).ready(
+                    function () {
+                        $("#dateChooser").datepicker({
+                            dateFormat: 'yy-mm-dd'
+                        });
+                    }
+            );
+        </script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class = "row"></div>
+            <div class="col-xs-4">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="/Chargeprj1/index.html">首頁</a>
+                    <a href="/Chargeprj1/Insert.html">新增</a>
+                    <a href="/Chargeprj1//Query.html">查詢</a>
+                    <a href="/Chargeprj1/Statistic.html">統計</a>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="col-xs-6">
+                <div id="main">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 功能</span>
+                    <form method = "POST" action="Charge_Insert">
+                        <p>支出日期<br/>
+
+
+                            <input type="text" name="Date" id="dateChooser">
+                        </p>    
+
+                        <p>支出項目<br/>
+                            <select name="subject">
+                                <option value="飯錢">飯錢</option>
+                                <option value="油錢">油錢</option>
+                                <option value="買衣服">買衣服</option>
+                                <option value="房租">房租</option>
+                                <option value="教育費">教育費</option>
+                                <option value="娛樂">娛樂</option>
+                                <option value="剪髮">剪髮</option>
+                                <option value="其它">其它</option>
+                            </select>
+
+                        </p>
+
+
+                        <p>金額<br/>
+                            <input type="text" name="Cost">
+                        </p>
+
+                        <p>支出原因<br/>
+                            <input type="text" name="Reason" value="">
+                        </p>
+
+                        <p>
+                            <input type = "submit" value="送出">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
